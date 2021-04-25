@@ -1,0 +1,204 @@
+body {
+    height: 100vh;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(90deg, rgba(33, 0, 57, 1) 0%, rgba(40, 0, 68, 1) 100%);
+    overflow-x: hidden;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    color: white;
+
+    nav {
+        #logo {
+            max-width: 100px;
+        }
+    }
+
+    #decoration {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-height: 60vh;
+            object-fit: contain;
+        }
+    }
+
+    section {
+        height: 100vh;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: #E73447;
+        }
+
+        .btn {
+            width: 10.125em;
+            height: 3.125em;
+            background-image: linear-gradient(236.25deg, #E73447 29.54%, #DE177B 64.38%);
+            color: white;
+            margin-right: 1em;
+            cursor: default;
+        }
+
+        .btn:hover {
+            color: white;
+        }
+
+        .on-dark button {
+            width: 10.125em;
+            height: 3.125em;
+            color: white;
+            background: none;
+            text-decoration: inherit;
+            font-family: system-ui;
+            transition: color .1s;
+        }
+
+        .on-dark button:hover {
+            color: #E73447;
+            transition: color .1s;
+        }
+
+        .border-gradient {
+            border: 1px solid;
+            border-image-slice: 1;
+            border-width: 5px;
+        }
+
+        .border-gradient-purple {
+            border-image-source: linear-gradient(to left, #E73447, #DE177B);
+        }
+    }
+
+    .form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        form {
+            max-width: 60vw;
+            min-height: 100%;
+            padding: 3em;
+            padding-right: 10vw;
+            padding-left: 10vw;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 6px;
+            background-color: white;
+
+            .logo-title {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    max-width: 5em;
+                }
+            }
+
+            input,
+            textarea,
+            #file {
+                margin: 2vh 0vw;
+            }
+
+            label {
+                font-weight: bold;
+                color: #79838B;
+            }
+
+            button {
+                width: 100%;
+                text-align: center;
+            }
+
+            h1 {
+                color: #3B454D;
+            }
+
+            h5 {
+                color: #828D96;
+            }
+        }
+    }
+
+    .mensagem-alerta {
+        text-align: center;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+
+    #content {
+        max-width: 80vw;
+        flex-direction: row !important;
+        overflow-x: auto;
+    }
+
+    #tb-result {
+        margin-left: 1vw;
+        margin-right: 1vw;
+        max-width: 33.3vw;
+        min-height: 60vh;
+
+        #peca-img {
+            width: 100%;
+            min-height: auto;
+            object-fit: contain;
+        }
+    }
+}
+
+#result{
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1200px) {
+    #home-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #decoration {
+        margin-top: 5vh;
+    }
+
+    .mensagem-alerta {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .form {
+        form {
+            max-width: 80vw !important;
+        }
+    }
+
+    input[type="file"] {
+        font-size: 12px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-image: linear-gradient(90deg, rgba(33, 0, 57, 1) 0%, rgba(40, 0, 68, 1) 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(236.25deg, #E73447 29.54%, #DE177B 64.38%);
+}
