@@ -16,7 +16,7 @@
         })
 })()
 
-// Impede o refresh na página result.php (evita que os dados dupliquem)
+// Impede o refresh na página result.php
 if (window.history.replaceState) {
     window.history.replaceState(null, null, window.location.href);
 }
