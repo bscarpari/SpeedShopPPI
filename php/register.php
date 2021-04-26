@@ -10,12 +10,12 @@ if (isset($_POST['submit'])) {
         fputs($insert, $nome_produto . ";");
         fputs($insert, $orcamento . ";");
         fputs($insert, $descricao . ";");
-        fputs($insert, $nome . ";". "\n");
+        fputs($insert, $novoNome . ";" . "\n");
 
-        $arq = fopen("./txt/info.txt", "r");
-        $register =  fgets($arq);
-        do {
-            list($nome_produto, $orcamento, $descricao, $nome_img) = explode(";", $register);
+        $lines = file('./txt/info.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        foreach ($lines as $l) {
+            list($nome_produto, $orcamento, $descricao, $novoNome) = explode(";", $l);
+            $src = 'imagens/' . $novoNome;
             echo '
             <table class="table table-striped table-light" id="tb-result">
                 <thead>
@@ -33,14 +33,13 @@ if (isset($_POST['submit'])) {
                         <td>' . $nome_produto . '</td>
                         <td>' . $orcamento . '</td>
                         <td>' . $descricao . '</td>
-                        <th scope="row" colspan="3">' . $nome . '</th>
+                        <th scope="row" colspan="3">' . $novoNome . '</th>
                     </tr>
                     <tr>
-                        <td colspan="6"><img src = "' . $destino . '" id="peca-img"/></img></td>
+                        <td colspan="6"><img src = "' . $src . '" id="peca-img"/></img></td>
                     </tr>
                 </tbody>
             </table>';
-        } while (($register = fgets($arq)) !== false);
-        fclose($arq);
+        }
     }
 }
