@@ -38,6 +38,7 @@ body section {
   height: 100vh;
   margin-bottom: 5vh;
   margin-top: 5vh;
+  border: 1px solid red;
 }
 
 body section a {
@@ -87,6 +88,10 @@ body section .border-gradient {
 
 body section .border-gradient-purple {
   border-image-source: linear-gradient(to left, #E73447, #DE177B);
+}
+
+body #home-section {
+  height: 100vh;
 }
 
 body .form {
@@ -184,10 +189,6 @@ body #tb-result #peca-img {
   min-height: auto;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-#result {
-  overflow: hidden;
 }
 
 @media only screen and (max-width: 1200px) {

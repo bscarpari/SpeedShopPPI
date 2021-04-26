@@ -30,6 +30,7 @@ body {
         height: 100vh;
         margin-bottom: 5vh;
         margin-top: 5vh;
+        border: 1px solid red;
 
         a {
             text-decoration: none;
@@ -77,6 +78,10 @@ body {
         .border-gradient-purple {
             border-image-source: linear-gradient(to left, #E73447, #DE177B);
         }
+    }
+
+    #home-section{
+        height: 100vh;
     }
 
     .form {

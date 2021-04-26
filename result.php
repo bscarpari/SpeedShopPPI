@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Resultados</title>
 </head>
-<body id="result">
+<body>
     <nav class="navbar navbar-expand-xl navbar-dark bg-transparent" id="nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">
